@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animación</title>
+<style >
+	div {
+  width: 100px;
+  height: 100px;
+  background: green;
+  position: relative;
+  animation: cuadro 5s infinite;
+}
+
+@keyframes cuadro {
+  0%   {top: 0px;}
+  25%  {top: 200px;}
+  75%  {top: 50px}
+  100% {top: 100px;}
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+	<h1>ANIMACIONES @keyframes</h1>
+
+	<div>
+		<a href="">INICIO</a>
+		<a href="">NOSOTROS</a>
+		<a href="">PRODUCTOS</a>
+	</div>
+
+</body>
+</html>
