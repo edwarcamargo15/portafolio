@@ -3,6 +3,8 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="portafolio.png">
+  <link rel="stylesheet" type="text/css" href="fonts/DoubleFeature20.ttf">
   
   <title>Portafolio</title>
   <meta charset="UTF-8">
@@ -13,7 +15,7 @@
     }
 
 
-    body {
+    main {
       font-family: Arial;
       margin: 0;
     }
@@ -21,25 +23,45 @@
 
 
 
-    .header {
-      padding: 60px;
-      text-align: center;
+    header {
+      padding: 40px;
       background: #1abc9c;
       color: white;
+      text-align: center;
+
     }
 
 
 
-     nav a {
+     a {
+     color: white;
+    }
+
+    a:hover{
       color: white;
+    }
+
+    ul li:hover
+     {background: #555; 
+     }
+
+    .dropdown-menu a:hover{
+      background-color: #000;
+      color: #fff;
+    }
+
+    li:hover #ip {
+      display: block;
 
     }
 
-    nav a:hover{
-      color: white;
-
+     li:hover #ipr {
+      display: block;
     }
 
+    li:hover #ex {
+      display: block;
+    }
 
     .row {  
       display: flex;
@@ -48,7 +70,7 @@
 
 
     .side {
-      flex: 30%;
+      flex: 20%;
       background-color: #f1f1f1;
       padding: 20px;
     }
@@ -61,12 +83,30 @@
     }
 
 
-    .fakeimg {
-      background-color: #aaa;
+    .fakeimg1 {
+      background-image: url("home.jpg");
       width: 100%;
       padding: 20px;
     }
 
+    .fakeimg2 {
+      background-image: url("1.jpg");
+      width: 100%;
+      padding: 20px;
+    }
+
+    .fakeimg3 {
+      background-image: url("2.jpg");
+      width: 100%;
+      padding: 20px;
+      height: 1280;
+    }
+    .fakeimg4 {
+      background-image: url("3.jpg");
+      width: 100%;
+      padding: 20px;
+    
+    }
 
     .footer {
       padding: 20px;
@@ -78,6 +118,30 @@
       letter-spacing: 8px;
     }
 
+ .animation {
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  padding:10px;
+  float: left;
+}
+
+@keyframes animacion{
+   /* Animación con from-to*/
+            from{ 
+                transform:rotate(0deg);}
+            to{
+                transform:rotate(360deg);}
+        }
+
+
+.animation:hover {
+   animation-name: animacion;
+    animation-duration: 10s;
+    animation-iteration-count:5;
+    animation-direction: reverse;
+}
+
 
     @media (max-width: 480px) {
       .row, .navbar {   
@@ -86,7 +150,7 @@
     }
   </style>
 </head>
-<body>
+<main>
 
 <!-- Header 
 <div style="background:yellow;padding:5px">
@@ -99,10 +163,10 @@
 </div>-->
 
 <!-- Header -->
-<div class="header">
-  <h1>PORTAFOLIO</h1>
-
-</div>
+<header>
+  <div><img class="animation" src="3.jpg"></img><br>
+    <h1>PORTAFOLIO</h1></div>
+</header>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-dark bg-dark">
@@ -114,10 +178,10 @@
    </li>
 
    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  aria-haspopup="true" aria-expanded="false">
       <i class="far fa-id-card"></i>Informacion Personal
     </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <div class="dropdown-menu" id="ip"aria-labelledby="navbarDropdown">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <div class="dropdown-divider"></div>
@@ -127,10 +191,10 @@
 
 
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
      <i class="fas fa-user-graduate" ></i>Informacion Profesional
-   </a>
-   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   </a>  
+   <div class="dropdown-menu" id="ipr" aria-labelledby="navbarDropdown">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <div class="dropdown-divider"></div>
@@ -138,10 +202,10 @@
     </div>
  </li>
  <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-user-tie"></i>Experiencia
   </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <div class="dropdown-menu" id="ex"aria-labelledby="navbarDropdown">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <div class="dropdown-divider"></div>
@@ -179,7 +243,7 @@
       </div>
     </div>
     
-    <div class="fakeimg" style="height:200px;">Image</div>
+    <div class="fakeimg1" style="height:200px;"></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -188,14 +252,14 @@
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
     <h3>MÁS INFORMACION</h3>
     <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+    <div class="fakeimg4" style="height:60px;">Image</div><br>
+    <div class="fakeimg4" style="height:60px;">Image</div><br>
+    <div class="fakeimg4" style="height:60px;">Image</div>
   </div>
   <div class="main">
     <h2>EDWAR YESID CAMARGO ROA</h2>
     <h5>JULIO 13, 2020</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
+    <div class="fakeimg2" style="height:200px;"></div>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -206,7 +270,7 @@
     <br>
     <h2>PRACTICA</h2>
     <h5>14, 07, 2020</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
+    <div class="fakeimg3" style="height:200px;"></div>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -219,12 +283,13 @@
 </div>
 
 
-<div class="footer">
+<footer class="footer">
   <h2>EDWAR CAMARGO PROGRAMACION 2020</h2>
-</div>
+</footer>
 
-</body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</main>
+
 </html>
