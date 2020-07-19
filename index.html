@@ -1,44 +1,306 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animación</title>
-<style >
-	div {
-  width: 100px;
-  height: 100px;
-  background: green;
-  position: relative;
-  animation: cuadro 8s ;
-}
-
-@keyframes cuadro {
-  0%   {top: 0px;}
-  25%  {top: 200px;}
-  75%  {top: 50px}
-  100% {top: 100px;}
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-</style>
-</head>
-<body>
-
-
-	<h1>ANIMACIONES @keyframes</h1>
-
-	<div>
-		<a href="">INICIO</a>
-		<a href="">NOSOTROS</a>
-		<a href="">PRODUCTOS</a>
-	</div>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="portafolio.png">
+  <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 
   
-    <a href="practica.html">PORTAFOLIO</a>
+  
+  <title>Portafolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-</body>
+
+    main {
+      font-family: Arial;
+      margin: 0;
+    }
+
+
+
+
+    header {
+      padding: 40px;
+      background: #1abc9c;
+      color: white;
+      text-align: center;
+
+    }
+
+
+
+     a {
+     color: white;
+    }
+
+    a:hover{
+      color: white;
+    }
+
+    ul li:hover
+     {background: #555; 
+     }
+
+    .dropdown-menu a:hover{
+      background-color: #000;
+      color: #fff;
+    }
+
+    li:hover #ip {
+      display: block;
+
+    }
+
+     li:hover #ipr {
+      display: block;
+    }
+
+    li:hover #ex {
+      display: block;
+    }
+
+    .row {  
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .side {
+      flex: 20%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+
+    .main {
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
+
+
+    .fakeimg1 {
+      background-image: url("home.jpg");
+      width: 100%;
+      padding: 20px;
+    }
+
+    .fakeimg2 {
+      background-image: url("1.jpg");
+      width: 100%;
+      padding: 20px;
+    }
+
+    .fakeimg3 {
+      background-image: url("2.jpg");
+      width: 100%;
+      padding: 20px;
+      height: 1280;
+    }
+    .fakeimg4 {
+      background-image: url("3.jpg");
+      width: 100%;
+      padding: 20px;
+    
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+    }
+
+    i{
+      letter-spacing: 8px;
+    }
+
+ .animation {
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+  padding:10px;
+  float: left;
+}
+
+@keyframes animacion{
+   /* Animación con from-to*/
+            from{ 
+                transform:rotate(0deg);}
+            to{
+                transform:rotate(360deg);}
+        }
+
+
+.animation:hover {
+   animation-name: animacion;
+    animation-duration: 10s;
+    animation-iteration-count:5;
+    animation-direction: reverse;
+}
+
+h1 {
+  font-family: 'Nosifer', cursive;
+
+}
+
+
+    @media (max-width: 480px) {
+      .row, .navbar {   
+        flex-direction: column;
+      }
+    }
+
+
+
+  </style>
+</head>
+<main>
+
+<!-- Header 
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+</div>-->
+
+<!-- Header -->
+<header>
+  <div class="texto"><img class="animation" src="3.jpg"></img><br>
+    <h1> PORTAFOLIO </h1></div>
+    <div class="cuadro"></div>
+</header>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-dark bg-dark">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+       <i class="fas fa-home"></i> Inicio
+     </a>
+   </li>
+
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  aria-haspopup="true" aria-expanded="false">
+      <i class="far fa-id-card"></i>Informacion Personal
+    </a>
+    <div class="dropdown-menu" id="ip"aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </li>
+
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
+     <i class="fas fa-user-graduate" ></i>Informacion Profesional
+   </a>  
+   <div class="dropdown-menu" id="ipr" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+ </li>
+ <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user-tie"></i>Experiencia
+  </a>
+  <div class="dropdown-menu" id="ex"aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+</nav>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <center><h2>PERFIL</h2></center>
+
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="edwar.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Edwar Yesid Camargo Roa </h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <footer>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal2" >Leer Más</button>
+          <button type="button" class="btn btn-primary">Perfil Profesional</button>
+        </footer>
+      </div>
+    </div>
+    
+    <div class="fakeimg1" style="height:200px;"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    <h3>MÁS INFORMACION</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg4" style="height:60px;">Image</div><br>
+    <div class="fakeimg4" style="height:60px;">Image</div><br>
+    <div class="fakeimg4" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>EDWAR YESID CAMARGO ROA</h2>
+    <h5>JULIO 13, 2020</h5>
+    <div class="fakeimg2" style="height:200px;"></div>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+    <br>
+    <h2>PRACTICA</h2>
+    <h5>14, 07, 2020</h5>
+    <div class="fakeimg3" style="height:200px;"></div>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    </p>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <h2>EDWAR CAMARGO PROGRAMACION 2020</h2>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</main>
+
 </html>
